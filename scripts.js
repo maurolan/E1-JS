@@ -1,8 +1,8 @@
 
 console.log(`\n EJ 1 - Crear una función que reciba un número por parámetro e indique en consola si el número es par o impar.\n`);
 
-var numero = 79;
-var numero2 = 88;
+let n = 79;
+let n2 = 88;
 
 function verificarSiEsPar(numero){
 	if(numero % 2 == 0){
@@ -14,40 +14,39 @@ function verificarSiEsPar(numero){
 	}
 }
 
-verificarSiEsPar(numero); 
+verificarSiEsPar(n); 
 
-verificarSiEsPar(numero2); 
+verificarSiEsPar(n2); 
 
 ////////////////////////////////////////////////////////////
 
 console.log(`\nEJ: 2- Crear una función que reciba dos números por parámetro e indique en consola que número es mayor, y si ninguno lo es, indicar por consola que son iguales.\n`);
 
-var numero1, numero2;
 
-var numero1 = 16;
-var numero2 = 34;
+let nu1 = 16;
+let nu2 = 34;
 
-var numero3 = 78;
-var numero4 = 20;
+let nu3 = 78;
+let nu4 = 20;
 
-var numero5 = 33;
-var numero6 = 33;
+let nu5 = 33;
+let nu6 = 33;
 
-function comparaNumero(num1, num2){
-    if (num1 > num2){
-        console.log("El numero: " + num1 + " es mayor que " + num2);
-    }else if(num2 > num1){
-        console.log("El numero: " + num2 + " es mayor que " + num1);
+function comparaNumero(numero1, numero2){
+    if (numero1 > numero2){
+        console.log("El numero: " + numero1 + " es mayor que " + numero2);
+    }else if(numero2 > numero1){
+        console.log("El numero: " + numero2 + " es mayor que " + numero1);
     }else{
-        console.log(num1 + " es igual a " + num2 );
+        console.log(numero1 + " es igual a " + numero2 );
     }
 }
 
-comparaNumero(numero1, numero2); 
+comparaNumero(nu1, nu2); 
 
-comparaNumero(numero3, numero4); 
+comparaNumero(nu3, nu4); 
 
-comparaNumero(numero5, numero6); 
+comparaNumero(nu5, nu6); 
 
 
 
@@ -55,21 +54,21 @@ comparaNumero(numero5, numero6);
 
 console.log(`\nEJ: 3- Crear una función que reciba un número por parámetro e indique en consola si ese número es múltiplo de 5.\n`);
 
-var numero = 45; // prueba con un numero multiplo de 5
+let unNum = 45; // prueba con un numero multiplo de 5
 
-var numero2 = 79; // prueba con un numero no multiplo de 5
+let unNum2 = 79; // prueba con un numero no multiplo de 5
 
-function esMultiploCinco(num){
-    if (num % 5 == 0){
-        console.log(`El numero ${num} es multiplo de 5`);
+function esMultiploCinco(numero){
+    if (numero % 5 == 0){
+        console.log(`El numero ${numero} es multiplo de 5`);
     }else{
-        console.log(`El numero ${num} No es multiplo de 5`);
+        console.log(`El numero ${numero} No es multiplo de 5`);
     }
 }
 
-esMultiploCinco(numero);
+esMultiploCinco(unNum);
 
-esMultiploCinco(numero2);
+esMultiploCinco(unNum2);
 
 
 ////////////////////////////////////////////////////////////
@@ -77,13 +76,13 @@ esMultiploCinco(numero2);
 console.log(`\nEJ: 4- Crear una función que reciba un número por parámetro e imprima por consola todos los números desde el 0 hasta llegar a ese número.\n`);
 
 
-var number = 5; // prubea 1
+let number = 5; // prubea 1
 
-var number2 = 16; // prubea 2
+let number2 = 16; // prubea 2
 
-function imprimirListaNumber(num){
+function imprimirListaNumber(_num){
 
-    for(let i=0;i<=num ; i++){
+    for(let i=0;i<=_num ; i++){
         console.log(`${i}`);
     }
 }
@@ -100,16 +99,16 @@ imprimirListaNumber(number2);
 console.log(`\nEJ: 5 - Crear una función que reciba una palabra y un número por parámetro e imprima por consola  esa palabra la cantidad correspondiente al número indicado.\n`);
 
 
-var palabra1 = "Arquitecto"; 
-var num1 = 4; 
+let pal = "Arquitecto"; 
+let otroNum = 4; 
 
-function imprimirPalabras(unaPalabra, numero){
-    for(let i=0;i<numero; i++){
-        console.log(i+1 + `-${unaPalabra}`);
+function imprimirPalabras(_pal, _numero){
+    for(let i=0;i<_numero; i++){
+        console.log(i+1 + `-${_pal}`);
     }
 }
 
-imprimirPalabras(palabra1,num1);
+imprimirPalabras(pal,otroNum);
 
 
 ////////////////////////////////////////////////////////////
@@ -117,12 +116,12 @@ imprimirPalabras(palabra1,num1);
 console.log(`\nEJ: 6 - Crear una función que reciba un array por parámetro e imprima por consola todos los valores de ese array.\n`);
 
 
-var meses = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+let meses = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
 
 console.log(meses);
 
 
-function imprimirArreglo(meses){
+function imprimirArreglo(_meses){
     for(let i=0;i<meses.length; i++){
         console.log(meses[i]);
     }
@@ -136,20 +135,20 @@ imprimirArreglo(meses);
 
 console.log(`\nEJ: 7 - Crear una función que reciba un array con 10 números e imprima por consola todos los valores de ese array, menos el que se encuentre en la 5ta posición del mismo. Ayuda: Recuerden que el primer índice de un array es \"0\".\n`);
 
-var numeros = [34,54,2,98,21,27,64,88,9,17];
+let losNumeros = [34,54,2,98,21,27,64,88,9,17];
 
-console.log(numeros);
+console.log(losNumeros);
 
-function imprimirQuintoNumero(numeros){
-   for(let i=0 ; i<numeros.length ; i++){
+function imprimirQuintoNumero(_numeros){
+   for(let i=0 ; i<_numeros.length ; i++){
            
     if(i != 4){
-        console.log(`numeros[`+ i +`] = ${numeros[i]}`);
+        console.log(`numeros[`+ i +`] = ${_numeros[i]}`);
     }
     }
 }
 
-imprimirQuintoNumero(numeros);
+imprimirQuintoNumero(losNumeros);
 
 
 
@@ -158,15 +157,16 @@ imprimirQuintoNumero(numeros);
 
 console.log(`\nEJ: 8 - Crea una función que reciba un array de números y un número por parámetro e imprima por consola cada número del array multiplicado por el número pasado por parámetro.\n`);
 
-var arregloDeNumeros = [7,2,9,4,5,1,0];
-var num = 3;
+let arregloDeNumeros = [7,2,9,4,5,1,0];
+let multiplicador = 3;
 
 console.log(arregloDeNumeros);
+console.log("multplicador: " + multiplicador);
 
-function imprimirMultiplicado(arreglo, multiplicador){
-    for(let i=0 ; i<arreglo.length; i++){
-        console.log(arregloDeNumeros[i] + ` * ` + multiplicador + ` = ` + arregloDeNumeros[i] * multiplicador);    
+function imprimirMultiplicado(_arreglo, _multiplicador){
+    for(let i=0 ; i < _arreglo.length; i++){
+        console.log(_arreglo[i] + ` * ` + _multiplicador + ` = ` + _arreglo[i] * _multiplicador);    
     }
 }
 
-imprimirMultiplicado(arregloDeNumeros,num);
+imprimirMultiplicado(arregloDeNumeros,multiplicador);
